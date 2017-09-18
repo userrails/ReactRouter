@@ -6,7 +6,8 @@ import Home from './Home';
 export default () => (
   <BrowserRouter>
   <Switch>
-    <Route path="/" exact component={Home} />
+    // <Route path="/" exact component={Home} />
+    <Route path="/" exact render={props => <Home {...props} />} />
     <Route path="/home" exact component={Home} />
     <Route path="/home/2" exact component={Home} />
   </Switch>
